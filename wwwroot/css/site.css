@@ -3304,3 +3304,117 @@ body {
     }
 
 }
+
+/* ================================
+   PÁGINA DE EDIÇÃO
+================================ */
+
+.edit-page {
+    width: 100%;
+    padding: 35px 0;
+}
+
+.edit-card {
+    max-width: 600px;
+    margin: 0 auto;
+
+    background: white;
+    padding: 30px 35px;
+
+    border-radius: 16px;
+
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+.edit-header h1 {
+    color: #0d6efd;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.edit-header p {
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+.edit-card hr {
+    margin-bottom: 25px;
+}
+
+
+/* Campos */
+
+.edit-card .form-group {
+    margin-bottom: 20px;
+}
+
+.edit-card .control-label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #0d6efd;
+    font-weight: 600;
+}
+
+.edit-card .form-control {
+    border-radius: 10px;
+    padding: 10px 13px;
+
+    border: 1px solid #ced4da;
+
+    transition: 0.2s;
+}
+
+.edit-card .form-control:focus {
+    border-color: #0d6efd;
+
+    box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.12);
+}
+
+
+/* Campo somente leitura */
+
+.edit-card input[readonly] {
+    background-color: #f8f9fa;
+}
+
+
+/* Botões */
+
+.edit-actions {
+    display: flex;
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.edit-actions .btn {
+    border-radius: 10px;
+
+    padding: 9px 18px;
+    font-weight: 600;
+}
+
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+
+    .edit-page {
+        padding: 20px 10px;
+    }
+
+    .edit-card {
+        padding: 25px 20px;
+    }
+
+    .edit-actions {
+        flex-direction: column;
+    }
+
+    .edit-actions .btn {
+        width: 100%;
+    }
+
+}

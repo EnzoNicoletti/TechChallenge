@@ -1,65 +1,149 @@
 @model IEnumerable<Microsoft.AspNetCore.Identity.IdentityUser>
+
 @{
     ViewData["Title"] = "Cadastro de Usuários";
-    var rolesUsuario = ViewBag.RolesUsuarios as Dictionary<string,string>;
+    var rolesUsuario = ViewBag.RolesUsuarios as Dictionary<string, string>;
 }
 
+<div class="table-page">
 
-<div class="container mt-4">
+    <!-- Cabeçalho -->
+    <div class="table-page-header">
 
-    <div class="table-responsive">
-        <a asp-controller="Account" asp-action="Register">Adicionar Usuário</a>
-        <table>
-            <thead>
-                <tr>
-                    <th>Usuário</th>
-                    <th>Perfil</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-                @if (Model.Any())
-                {
-                    foreach (var usuario in Model)
+        <div>
+            <h1 class="table-page-title">
+                Usuários
+            </h1>
+
+            <p class="table-page-description">
+                Consulte e gerencie os usuários cadastrados na plataforma,
+                acompanhando seus perfis e permissões de acesso.
+            </p>
+        </div>
+
+        <a asp-controller="Account"
+           asp-action="Register"
+           class="table-create-button">
+
+            <i class="bi bi-plus-lg"></i>
+            Adicionar Usuário
+
+        </a>
+
+    </div>
+
+
+    <!-- Tabela -->
+    <div class="table-container">
+
+        <div class="table-responsive">
+
+            <table class="table tech-table table-striped">
+
+                <thead>
+                    <tr>
+
+                        <th>
+                            Usuário
+                        </th>
+
+                        <th>
+                            Perfil
+                        </th>
+
+                        <th class="actions-column">
+                            Ações
+                        </th>
+
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    @if (Model.Any())
                     {
-                        <tr>
-                            <td>
-                                @usuario.Email
-                            </td>
-                            <td>
-                                @if(rolesUsuario != null){
-                                    foreach(var role in rolesUsuario){
-                                        @if(usuario.Id == role.Key.ToString()){
-                                        <span class="badge bg-primary">
-                                            @role.Value
-                                        </span>
+                        foreach (var usuario in Model)
+                        {
+                            <tr>
+
+                                <!-- USUÁRIO -->
+                                <td class="fw-semibold">
+                                    @usuario.Email
+                                </td>
+
+
+                                <!-- PERFIL -->
+                                <td>
+
+                                    @if (rolesUsuario != null)
+                                    {
+                                        foreach (var role in rolesUsuario)
+                                        {
+                                            @if (usuario.Id == role.Key.ToString())
+                                            {
+                                                <span class="badge category-active">
+                                                    <i class="bi bi-person-badge-fill"></i>
+                                                    @role.Value
+                                                </span>
+                                            }
                                         }
                                     }
-                                } else{
-                                    <span class="badge bg-primary">
-                                        Sem Perfil
-                                    </span>
-                                }
-                            </td>
-                            <td>
-                                <a asp-action="TornarAdmin" asp-route-id="@usuario.Id">Tornar Admin</a> |
-                                <a asp-action="TrocarPerfil" asp-route-id="@usuario.Id">Trocar Perfil</a> |
-                                <a asp-action="ExcluirUsuario" asp-route-id="@usuario.Id">Excluir</a>
+                                    else
+                                    {
+                                        <span class="badge category-inactive">
+                                            <i class="bi bi-dash-circle-fill"></i>
+                                            Sem Perfil
+                                        </span>
+                                    }
+
+                                </td>
+
+
+                                <!-- AÇÕES -->
+                                <td>
+
+                                    <div class="table-actions">
+
+                                        <a asp-action="TrocarPerfil"
+                                           asp-route-id="@usuario.Id"
+                                           class="table-action edit-action"
+                                           title="Editar Perfil">
+
+                                            <i class="bi bi-pencil-fill"></i>
+
+                                        </a>
+
+
+                                        <a asp-action="ExcluirUsuario"
+                                           asp-route-id="@usuario.Id"
+                                           class="table-action delete-action"
+                                           title="Excluir Usuário">
+
+                                            <i class="bi bi-trash-fill"></i>
+
+                                        </a>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="3" class="text-center py-4">
+                                Nenhum usuário cadastrado
                             </td>
                         </tr>
-
                     }
-                }
-                else
-                {
-                    <tr>
-                        <td colspan="3" class="text-center py-4">
-                            Nenhum usuário Cadastrado
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+
+                </tbody>
+
+            </table>
+
+        </div>
 
     </div>
 
