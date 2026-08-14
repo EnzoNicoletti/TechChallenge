@@ -1,77 +1,182 @@
 @model IEnumerable<TechChallenge.Models.Projeto>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Projetos";
 }
 
-<h1>Index</h1>
+<div class="table-page">
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Descricao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DataInicio)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DataFim)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Pontuacao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Professor)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Categoria)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Equipe)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Descricao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataInicio)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataFim)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Pontuacao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Professor.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Categoria.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Equipe.Nome)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <!-- Cabeçalho -->
+    <div class="table-page-header">
+
+        <div>
+            <h1 class="table-page-title">
+                Projetos
+            </h1>
+
+            <p class="table-page-description">
+                Gerencie os projetos desenvolvidos pelos estudantes, acompanhando
+                seus períodos, responsáveis, categorias, equipes e pontuações.
+            </p>
+        </div>
+
+        <a asp-action="Create" class="table-create-button">
+            <i class="bi bi-plus-lg"></i>
+            Novo Projeto
+        </a>
+
+    </div>
+
+
+    <!-- Tabela -->
+    <div class="table-container">
+
+        <div class="table-responsive">
+
+            <table class="table tech-table table-striped">
+
+                <thead>
+                    <tr>
+
+                        <th>
+                            @Html.DisplayNameFor(model => model.Nome)
+                        </th>
+
+                        <th>
+                            @Html.DisplayNameFor(model => model.Descricao)
+                        </th>
+
+                        <th>
+                            @Html.DisplayNameFor(model => model.DataInicio)
+                        </th>
+
+                        <th>
+                            @Html.DisplayNameFor(model => model.DataFim)
+                        </th>
+
+                        <th>
+                            @Html.DisplayNameFor(model => model.Pontuacao)
+                        </th>
+
+                        <th>
+                            @Html.DisplayNameFor(model => model.Professor)
+                        </th>
+
+                        <th>
+                            @Html.DisplayNameFor(model => model.Categoria)
+                        </th>
+
+                        <th>
+                            @Html.DisplayNameFor(model => model.Equipe)
+                        </th>
+
+                        <th class="actions-column">
+                            Ações
+                        </th>
+
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+
+                            <!-- NOME -->
+                            <td class="fw-semibold">
+                                @Html.DisplayFor(modelItem => item.Nome)
+                            </td>
+
+
+                            <!-- DESCRIÇÃO -->
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Descricao)
+                            </td>
+
+
+                            <!-- DATA DE INÍCIO -->
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DataInicio)
+                            </td>
+
+
+                            <!-- DATA DE FIM -->
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DataFim)
+                            </td>
+
+
+                            <!-- PONTUAÇÃO -->
+                            <td>
+
+                                <span class="project-score">
+                                    <i class="bi bi-star-fill"></i>
+                                    @Html.DisplayFor(modelItem => item.Pontuacao)
+                                </span>
+
+                            </td>
+
+
+                            <!-- PROFESSOR -->
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Professor.Email)
+                            </td>
+
+
+                            <!-- CATEGORIA -->
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Categoria.Nome)
+                            </td>
+
+
+                            <!-- EQUIPE -->
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Equipe.Nome)
+                            </td>
+
+
+                            <!-- AÇÕES -->
+                            <td>
+
+                                <div class="table-actions">
+
+                                    <a asp-action="Edit" asp-route-id="@item.Id" class="table-action edit-action"
+                                       title="Editar">
+
+                                        <i class="bi bi-pencil-fill"></i>
+
+                                    </a>
+
+
+                                    <a asp-action="Details" asp-route-id="@item.Id" class="table-action details-action"
+                                       title="Detalhes">
+
+                                        <i class="bi bi-eye-fill"></i>
+
+                                    </a>
+
+
+                                    <a asp-action="Delete" asp-route-id="@item.Id" class="table-action delete-action"
+                                       title="Excluir">
+
+                                        <i class="bi bi-trash-fill"></i>
+
+                                    </a>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,81 +10,464 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/TechChallenge.styles.css" asp-append-version="true" />
 </head>
-<body>
+
+<body class="d-flex flex-column min-vh-100">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">TechChallenge</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Tech" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Tech" asp-action="About">Sobre</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Tech" asp-action="Contact">Contato</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Tech" asp-action="Dashboard">Dashboard</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Alunos" asp-action="Index">Alunos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Categorias" asp-action="Index">Categorias</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Professores" asp-action="Index">Professores</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Equipes" asp-action="Index">Equipes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Projetos" asp-action="Index">Projetos</a>
-                        </li>
-                    </ul>
-                    
-                    <!-- Incorpora o trecho de Login / Logout -->
-                    <partial name="_LoginPartial" />
+<nav class="navbar navbar-expand-sm navbar-toggleable-sm tech-navbar mb-3">
+    <div class="container-fluid px-4">
+
+        <!-- LOGO / MARCA -->
+        <a class="navbar-brand tech-brand"
+           asp-area=""
+           asp-controller="Home"
+           asp-action="Index">
+
+            <img src="~/img/521d8446-71f0-46ca-8555-27866a25ccf8.png"
+                 alt="TechChallenge" />
+
+        </a>
+
+
+        <!-- BOTÃO MOBILE -->
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target=".navbar-collapse"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+
+            <ul class="navbar-nav flex-grow-1 tech-nav">
+
+
+                <!-- HOME -->
+                <li class="nav-item">
+
+                    <a class="nav-link
+                       @(ViewContext.RouteData.Values["controller"]?.ToString() == "Home"
+                         && ViewContext.RouteData.Values["action"]?.ToString() == "Index"
+                         ? "active"
+                         : "")"
+                       asp-area=""
+                       asp-controller="Home"
+                       asp-action="Index">
+
+                        <i class="bi bi-house-fill"></i>
+                        <span>Home</span>
+
+                    </a>
+
+                </li>
+
+
+                <!-- SOBRE -->
+                <li class="nav-item">
+
+                    <a class="nav-link
+                       @(ViewContext.RouteData.Values["controller"]?.ToString() == "Tech"
+                         && ViewContext.RouteData.Values["action"]?.ToString() == "About"
+                         ? "active"
+                         : "")"
+                       asp-area=""
+                       asp-controller="Tech"
+                       asp-action="About">
+
+                        <i class="bi bi-info-circle"></i>
+                        <span>Sobre</span>
+
+                    </a>
+
+                </li>
+
+
+                <!-- CONTATO -->
+                <li class="nav-item">
+
+                    <a class="nav-link
+                       @(ViewContext.RouteData.Values["controller"]?.ToString() == "Tech"
+                         && ViewContext.RouteData.Values["action"]?.ToString() == "Contact"
+                         ? "active"
+                         : "")"
+                       asp-area=""
+                       asp-controller="Tech"
+                       asp-action="Contact">
+
+                        <i class="bi bi-person-lines-fill"></i>
+                        <span>Contato</span>
+
+                    </a>
+
+                </li>
+
+
+                <!-- DASHBOARD -->
+                <li class="nav-item">
+
+                    <a class="nav-link
+                       @(ViewContext.RouteData.Values["controller"]?.ToString() == "Tech"
+                         && ViewContext.RouteData.Values["action"]?.ToString() == "Dashboard"
+                         ? "active"
+                         : "")"
+                       asp-area=""
+                       asp-controller="Tech"
+                       asp-action="Dashboard">
+
+                        <i class="bi bi-grid-1x2-fill"></i>
+                        <span>Dashboard</span>
+
+                    </a>
+
+                </li>
+
+
+                <!-- ALUNOS -->
+                <li class="nav-item">
+
+                    <a class="nav-link
+                       @(ViewContext.RouteData.Values["controller"]?.ToString() == "Alunos"
+                         ? "active"
+                         : "")"
+                       asp-area=""
+                       asp-controller="Alunos"
+                       asp-action="Index">
+
+                        <i class="bi bi-mortarboard-fill"></i>
+                        <span>Alunos</span>
+
+                    </a>
+
+                </li>
+
+
+                <!-- CATEGORIAS -->
+                <li class="nav-item">
+
+                    <a class="nav-link
+                       @(ViewContext.RouteData.Values["controller"]?.ToString() == "Categorias"
+                         ? "active"
+                         : "")"
+                       asp-area=""
+                       asp-controller="Categorias"
+                       asp-action="Index">
+
+                        <i class="bi bi-tags-fill"></i>
+                        <span>Categorias</span>
+
+                    </a>
+
+                </li>
+
+
+                <!-- PROFESSORES -->
+                <li class="nav-item">
+
+                    <a class="nav-link
+                       @(ViewContext.RouteData.Values["controller"]?.ToString() == "Professores"
+                         ? "active"
+                         : "")"
+                       asp-area=""
+                       asp-controller="Professores"
+                       asp-action="Index">
+
+                        <i class="bi bi-person-workspace"></i>
+                        <span>Professores</span>
+
+                    </a>
+
+                </li>
+
+
+                <!-- EQUIPES -->
+                <li class="nav-item">
+
+                    <a class="nav-link
+                       @(ViewContext.RouteData.Values["controller"]?.ToString() == "Equipes"
+                         ? "active"
+                         : "")"
+                       asp-area=""
+                       asp-controller="Equipes"
+                       asp-action="Index">
+
+                        <i class="bi bi-people-fill"></i>
+                        <span>Equipes</span>
+
+                    </a>
+
+                </li>
+
+
+                <!-- PROJETOS -->
+                <li class="nav-item">
+
+                    <a class="nav-link
+                       @(ViewContext.RouteData.Values["controller"]?.ToString() == "Projetos"
+                         ? "active"
+                         : "")"
+                       asp-area=""
+                       asp-controller="Projetos"
+                       asp-action="Index">
+
+                        <i class="bi bi-kanban-fill"></i>
+                        <span>Projetos</span>
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+
+            <!-- LOGIN -->
+            <partial name="_LoginPartial" />
+
+        </div>
+    </div>
+</nav>
+    </header>
+<main role="main" class="flex-grow-1">
+
+    <div class="container mt-2">
+
+        @if (TempData["Success"] != null)
+        {
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                @TempData["Success"]
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="alert"></button>
+            </div>
+        }
+
+        @if (TempData["Error"] != null)
+        {
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                @TempData["Error"]
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="alert"></button>
+            </div>
+        }
+
+    </div>
+
+    @RenderBody()
+
+</main>
+
+<footer class="tech-footer">
+
+    <div class="container-fluid">
+
+        <div class="footer-content">
+
+
+            <!-- =========================================
+                 ESQUERDA - COPYRIGHT
+            ========================================== -->
+
+            <div class="footer-column footer-copyright">
+
+                <div class="footer-brand">
+                    TechChallenge
+                </div>
+
+                <p>
+                    © @DateTime.Now.Year TechChallenge.
+                    Todos os direitos reservados.
+                </p>
+
+                <span>
+                    Plataforma para gestão de projetos estudantis.
+                </span>
+
+            </div>
+
+
+            <!-- =========================================
+                 CENTRO - NAVEGAÇÃO
+            ========================================== -->
+
+            <div class="footer-column footer-navigation">
+
+                <h4>
+                    Navegação
+                </h4>
+
+                <div class="footer-links">
+
+                    <a asp-controller="Home"
+                       asp-action="Index">
+
+                        <i class="bi bi-house-fill"></i>
+                        Home
+
+                    </a>
+
+
+                    <a asp-controller="Tech"
+                       asp-action="About">
+
+                        <i class="bi bi-info-circle"></i>
+                        Sobre
+
+                    </a>
+
+
+                    <a asp-controller="Tech"
+                       asp-action="Contact">
+
+                        <i class="bi bi-person-lines-fill"></i>
+                        Contato
+
+                    </a>
+
+
+                    <a asp-controller="Tech"
+                       asp-action="Dashboard">
+
+                        <i class="bi bi-grid-1x2-fill"></i>
+                        Dashboard
+
+                    </a>
+
+
+                    <a asp-controller="Projetos"
+                       asp-action="Index">
+
+                        <i class="bi bi-kanban-fill"></i>
+                        Projetos
+
+                    </a>
+
+
+                    <a asp-controller="Equipes"
+                       asp-action="Index">
+
+                        <i class="bi bi-people-fill"></i>
+                        Equipes
+
+                    </a>
+
+
+                    <a asp-controller="Alunos"
+                       asp-action="Index">
+
+                        <i class="bi bi-mortarboard-fill"></i>
+                        Alunos
+
+                    </a>
 
                 </div>
+
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            <div class="container mt-2">
-                @if (TempData["Success"] != null)
-                {
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        @TempData["Success"]
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    </div>
-                }
-                @if (TempData["Error"] != null)
-                {
-                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                        @TempData["Error"]
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    </div>
-                }
-            </div>            
-            @RenderBody()
-        </main>
+
+
+            <!-- =========================================
+                 DIREITA - SUPORTE
+            ========================================== -->
+
+            <div class="footer-column footer-support">
+
+                <h4>
+                    Suporte
+                </h4>
+
+                <p>
+                    Precisa de ajuda?
+                </p>
+
+                <div class="footer-socials">
+
+                    <!-- GitHub -->
+                    <a href="https://github.com/SEU_USUARIO"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="GitHub">
+
+                        <i class="bi bi-github"></i>
+
+                    </a>
+
+
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/SEU_USUARIO/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Instagram">
+
+                        <i class="bi bi-instagram"></i>
+
+                    </a>
+
+
+                    <!-- YouTube -->
+                    <a href="https://www.youtube.com/@@SEU_CANAL"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="YouTube">
+
+                        <i class="bi bi-youtube"></i>
+
+                    </a>
+
+
+                    <!-- X -->
+                    <a href="https://x.com/SEU_USUARIO"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="X">
+
+                        <i class="bi bi-twitter-x"></i>
+
+                    </a>
+
+
+                    <!-- Discord -->
+                    <a href="https://discord.gg/SEU_CONVITE"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Discord">
+
+                        <i class="bi bi-discord"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- LINHA INFERIOR -->
+
+        <div class="footer-bottom">
+
+            <span>
+                TechChallenge
+            </span>
+
+            <span>
+                Desenvolvido com tecnologia e criatividade.
+            </span>
+
+        </div>
+
     </div>
-    
-    <footer class="footer mt-5 text-muted text-center">
-        TechChallenge &copy; 2026 | Desenvolvido com 🖤 por Prof. Cristiano de Paula
-    </footer>
+
+</footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap-icons/bootstrap-icons.min.css" />
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>

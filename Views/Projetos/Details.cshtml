@@ -1,66 +1,67 @@
 @model TechChallenge.Models.Projeto
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalhes do Projeto";
 }
 
-<h1>Details</h1>
+<div class="form-page">
 
-<div>
-    <h4>Projeto</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Descricao)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Descricao)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DataInicio)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DataInicio)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DataFim)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DataFim)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Pontuacao)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Pontuacao)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Professor)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Professor.Email)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Categoria)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Categoria.Nome)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Equipe)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Equipe.Nome)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <div class="form-page-header">
+        <h1 class="form-page-title">Detalhes do Projeto</h1>
+        <p class="form-page-description">
+            Consulte todas as informações relacionadas ao projeto, sua equipe,
+            categoria, professor responsável e período de execução.
+        </p>
+    </div>
+
+    <div class="details-card">
+
+        <h4 class="details-title">Projeto</h4>
+
+        <dl class="details-list">
+
+            <dt>@Html.DisplayNameFor(model => model.Nome)</dt>
+            <dd>@Html.DisplayFor(model => model.Nome)</dd>
+
+            <dt>@Html.DisplayNameFor(model => model.Descricao)</dt>
+            <dd>@Html.DisplayFor(model => model.Descricao)</dd>
+
+            <dt>@Html.DisplayNameFor(model => model.DataInicio)</dt>
+            <dd>@Html.DisplayFor(model => model.DataInicio)</dd>
+
+            <dt>@Html.DisplayNameFor(model => model.DataFim)</dt>
+            <dd>@Html.DisplayFor(model => model.DataFim)</dd>
+
+            <dt>@Html.DisplayNameFor(model => model.Pontuacao)</dt>
+            <dd>@Html.DisplayFor(model => model.Pontuacao)</dd>
+
+            <dt>@Html.DisplayNameFor(model => model.Professor)</dt>
+            <dd>@Html.DisplayFor(model => model.Professor.Email)</dd>
+
+            <dt>@Html.DisplayNameFor(model => model.Categoria)</dt>
+            <dd>@Html.DisplayFor(model => model.Categoria.Nome)</dd>
+
+            <dt>@Html.DisplayNameFor(model => model.Equipe)</dt>
+            <dd>@Html.DisplayFor(model => model.Equipe.Nome)</dd>
+
+        </dl>
+
+        <div class="details-actions">
+
+            <a asp-action="Edit"
+               asp-route-id="@Model?.Id"
+               class="btn btn-primary">
+                <i class="bi bi-pencil-fill"></i>
+                Editar
+            </a>
+
+            <a asp-action="Index"
+               class="details-back-link">
+                Voltar para a lista
+            </a>
+
+        </div>
+
+    </div>
+
 </div>

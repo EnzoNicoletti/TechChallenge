@@ -1,54 +1,69 @@
 @model TechChallenge.Aluno
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalhes do Aluno";
 }
 
-<h1>Details</h1>
+<div class="form-page">
 
-<div>
-    <h4>Aluno</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Telefone)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Telefone)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DataNascimento)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DataNascimento)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DataCadastro)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DataCadastro)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Ativo)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Ativo)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <div class="form-page-header">
+        <h1 class="form-page-title">Detalhes do Aluno</h1>
+        <p class="form-page-description">
+            Consulte as informações cadastradas do aluno e seus dados na plataforma.
+        </p>
+    </div>
+
+    <div class="details-card">
+
+        <h4 class="details-title">Aluno</h4>
+
+        <dl class="details-list">
+
+            <dt>@Html.DisplayNameFor(model => model.Nome)</dt>
+            <dd>@Html.DisplayFor(model => model.Nome)</dd>
+
+            <dt>@Html.DisplayNameFor(model => model.Email)</dt>
+            <dd>@Html.DisplayFor(model => model.Email)</dd>
+
+            <dt>@Html.DisplayNameFor(model => model.Telefone)</dt>
+            <dd>@Html.DisplayFor(model => model.Telefone)</dd>
+
+            <dt>@Html.DisplayNameFor(model => model.DataNascimento)</dt>
+            <dd>@Html.DisplayFor(model => model.DataNascimento)</dd>
+
+            <dt>@Html.DisplayNameFor(model => model.DataCadastro)</dt>
+            <dd>@Html.DisplayFor(model => model.DataCadastro)</dd>
+
+            <dt>@Html.DisplayNameFor(model => model.Ativo)</dt>
+            <dd>
+                @if (Model.Ativo)
+                {
+                    <span class="badge bg-success">Ativo</span>
+                }
+                else
+                {
+                    <span class="badge bg-secondary">Inativo</span>
+                }
+            </dd>
+
+        </dl>
+
+        <div class="details-actions">
+
+            <a asp-action="Edit"
+               asp-route-id="@Model?.Id"
+               class="btn btn-primary">
+                <i class="bi bi-pencil-fill"></i>
+                Editar
+            </a>
+
+            <a asp-action="Index"
+               class="details-back-link">
+                Voltar para a lista
+            </a>
+
+        </div>
+
+    </div>
+
 </div>

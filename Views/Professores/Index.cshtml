@@ -1,59 +1,168 @@
 @model IEnumerable<TechChallenge.Professor>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Professores";
 }
 
-<h1>Index</h1>
+<div class="table-page">
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Especialidade)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DataContratacao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Ativo)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Especialidade)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataContratacao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ativo)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <!-- Cabeçalho -->
+    <div class="table-page-header">
+
+        <div>
+            <h1 class="table-page-title">
+                Professores
+            </h1>
+
+            <p class="table-page-description">
+                Consulte e gerencie os professores responsáveis por orientar
+                e acompanhar os projetos desenvolvidos pelos estudantes.
+            </p>
+        </div>
+
+        <a asp-action="Create" class="table-create-button">
+            <i class="bi bi-plus-lg"></i>
+            Novo Professor
+        </a>
+
+    </div>
+
+
+    <!-- Tabela -->
+    <div class="table-container">
+
+        <div class="table-responsive">
+
+            <table class="table tech-table table-striped">
+
+                <thead>
+                    <tr>
+
+                        <th>
+                            @Html.DisplayNameFor(model => model.Nome)
+                        </th>
+
+                        <th>
+                            @Html.DisplayNameFor(model => model.Email)
+                        </th>
+
+                        <th>
+                            @Html.DisplayNameFor(model => model.Especialidade)
+                        </th>
+
+                        <th>
+                            @Html.DisplayNameFor(model => model.DataContratacao)
+                        </th>
+
+                        <th>
+                            @Html.DisplayNameFor(model => model.Ativo)
+                        </th>
+
+                        <th class="actions-column">
+                            Ações
+                        </th>
+
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+
+                            <!-- NOME -->
+                            <td class="fw-semibold">
+                                @Html.DisplayFor(modelItem => item.Nome)
+                            </td>
+
+
+                            <!-- EMAIL -->
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Email)
+                            </td>
+
+
+                            <!-- ESPECIALIDADE -->
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Especialidade)
+                            </td>
+
+
+                            <!-- DATA -->
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DataContratacao)
+                            </td>
+
+
+                            <!-- STATUS -->
+                            <td>
+
+                                @if (item.Ativo)
+                                {
+                                    <span class="badge category-active">
+                                        <i class="bi bi-check-circle-fill"></i>
+                                        Ativo
+                                    </span>
+                                }
+                                else
+                                {
+                                    <span class="badge category-inactive">
+                                        <i class="bi bi-dash-circle-fill"></i>
+                                        Inativo
+                                    </span>
+                                }
+
+                            </td>
+
+
+                            <!-- AÇÕES -->
+                            <td>
+
+                                <div class="table-actions">
+
+                                    <a asp-action="Edit"
+                                       asp-route-id="@item.Id"
+                                       class="table-action edit-action"
+                                       title="Editar">
+
+                                        <i class="bi bi-pencil-fill"></i>
+
+                                    </a>
+
+
+                                    <a asp-action="Details"
+                                       asp-route-id="@item.Id"
+                                       class="table-action details-action"
+                                       title="Detalhes">
+
+                                        <i class="bi bi-eye-fill"></i>
+
+                                    </a>
+
+
+                                    <a asp-action="Delete"
+                                       asp-route-id="@item.Id"
+                                       class="table-action delete-action"
+                                       title="Excluir">
+
+                                        <i class="bi bi-trash-fill"></i>
+
+                                    </a>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
