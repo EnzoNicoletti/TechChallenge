@@ -1,0 +1,18 @@
+@using Microsoft.EntityFrameworkCore.Metadata.Internal
+@model Microsoft.AspNetCore.Identity.IdentityUser
+@{
+    var rolesDisponiveis = ViewBag.rolesDisponiveis;
+}
+
+<form method="post" action="TrocarPerfil">
+
+    <input type="hidden" name="idUser" value="@Model.Id" />
+
+    <select name="role">
+        @foreach(var role in rolesDisponiveis){
+        <option asp-action="" value="@role">@role</option>
+        }
+    </select>
+
+    <input type="submit" value="Enviar" />
+</form>

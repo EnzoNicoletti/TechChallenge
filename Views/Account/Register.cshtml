@@ -87,6 +87,13 @@
                                 <option value="Professor">
                                     Professor
                                 </option>
+                                
+                                @if (User.IsInRole("Admin")) {
+                                    <option value="Admin">
+                                        Admin
+                                    </option>
+                                }
+                                
                             </select>
 
                             <span asp-validation-for="Role"

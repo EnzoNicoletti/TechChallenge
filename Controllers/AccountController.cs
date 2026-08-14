@@ -65,9 +65,15 @@ public class AccountController : Controller
             // Adiciona Role ao usuário
             await _userManager.AddToRoleAsync(user,model.Role);
             // Login automático após cadastro
+            if(User.IsInRole("Admin"))
+            {
+            return RedirectToAction("Usuarios","Admin");
+            } else
+            {
             await _signInManager.SignInAsync(user,isPersistent: false);
-
             return RedirectToAction("Index","Home");
+            }
+
         }
 
         foreach(var error in result.Errors)

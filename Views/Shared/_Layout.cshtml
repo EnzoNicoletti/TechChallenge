@@ -13,456 +13,411 @@
 
 <body class="d-flex flex-column min-vh-100">
     <header>
-<nav class="navbar navbar-expand-sm navbar-toggleable-sm tech-navbar mb-3">
-    <div class="container-fluid px-4">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm tech-navbar mb-3">
+            <div class="container-fluid px-4">
 
-        <!-- LOGO / MARCA -->
-        <a class="navbar-brand tech-brand"
-           asp-area=""
-           asp-controller="Home"
-           asp-action="Index">
+                <!-- LOGO / MARCA -->
+                <a class="navbar-brand tech-brand" asp-area="" asp-controller="Home" asp-action="Index">
 
-            <img src="~/img/521d8446-71f0-46ca-8555-27866a25ccf8.png"
-                 alt="TechChallenge" />
+                    <img src="~/img/521d8446-71f0-46ca-8555-27866a25ccf8.png" alt="TechChallenge" />
 
-        </a>
+                </a>
 
 
-        <!-- BOTÃO MOBILE -->
-        <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target=".navbar-collapse"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
+                <!-- BOTÃO MOBILE -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 
-            <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
 
-        </button>
+                </button>
 
 
-        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
 
-            <ul class="navbar-nav flex-grow-1 tech-nav">
+                    <ul class="navbar-nav flex-grow-1 tech-nav">
 
 
-                <!-- HOME -->
-                <li class="nav-item">
+                        <!-- HOME -->
+                        <li class="nav-item">
 
-                    <a class="nav-link
-                       @(ViewContext.RouteData.Values["controller"]?.ToString() == "Home"
-                         && ViewContext.RouteData.Values["action"]?.ToString() == "Index"
-                         ? "active"
-                         : "")"
-                       asp-area=""
-                       asp-controller="Home"
-                       asp-action="Index">
+                            <a class="nav-link
+                                @(ViewContext.RouteData.Values["controller"]?.ToString() == "Home"
+                               && ViewContext.RouteData.Values["action"]?.ToString() == "Index"
+                               ? "active"
+                               : "")" asp-area="" asp-controller="Home" asp-action="Index">
 
-                        <i class="bi bi-house-fill"></i>
-                        <span>Home</span>
+                                <i class="bi bi-house-fill"></i>
+                                <span>Home</span>
 
-                    </a>
+                            </a>
 
-                </li>
+                        </li>
 
 
-                <!-- SOBRE -->
-                <li class="nav-item">
+                        <!-- SOBRE -->
+                        <li class="nav-item">
 
-                    <a class="nav-link
-                       @(ViewContext.RouteData.Values["controller"]?.ToString() == "Tech"
-                         && ViewContext.RouteData.Values["action"]?.ToString() == "About"
-                         ? "active"
-                         : "")"
-                       asp-area=""
-                       asp-controller="Tech"
-                       asp-action="About">
+                            <a class="nav-link
+                                @(ViewContext.RouteData.Values["controller"]?.ToString() == "Tech"
+                               && ViewContext.RouteData.Values["action"]?.ToString() == "About"
+                               ? "active"
+                               : "")" asp-area="" asp-controller="Tech" asp-action="About">
 
-                        <i class="bi bi-info-circle"></i>
-                        <span>Sobre</span>
+                                <i class="bi bi-info-circle"></i>
+                                <span>Sobre</span>
 
-                    </a>
+                            </a>
 
-                </li>
+                        </li>
 
 
-                <!-- CONTATO -->
-                <li class="nav-item">
+                        <!-- CONTATO -->
+                        <li class="nav-item">
 
-                    <a class="nav-link
-                       @(ViewContext.RouteData.Values["controller"]?.ToString() == "Tech"
-                         && ViewContext.RouteData.Values["action"]?.ToString() == "Contact"
-                         ? "active"
-                         : "")"
-                       asp-area=""
-                       asp-controller="Tech"
-                       asp-action="Contact">
+                            <a class="nav-link
+                                @(ViewContext.RouteData.Values["controller"]?.ToString() == "Tech"
+                               && ViewContext.RouteData.Values["action"]?.ToString() == "Contact"
+                               ? "active"
+                               : "")" asp-area="" asp-controller="Tech" asp-action="Contact">
 
-                        <i class="bi bi-person-lines-fill"></i>
-                        <span>Contato</span>
+                                <i class="bi bi-person-lines-fill"></i>
+                                <span>Contato</span>
 
-                    </a>
+                            </a>
 
-                </li>
+                        </li>
 
 
-                <!-- DASHBOARD -->
-                <li class="nav-item">
+                        <!-- DASHBOARD -->
+                        <li class="nav-item">
 
-                    <a class="nav-link
-                       @(ViewContext.RouteData.Values["controller"]?.ToString() == "Tech"
-                         && ViewContext.RouteData.Values["action"]?.ToString() == "Dashboard"
-                         ? "active"
-                         : "")"
-                       asp-area=""
-                       asp-controller="Tech"
-                       asp-action="Dashboard">
+                            <a class="nav-link
+                                @(ViewContext.RouteData.Values["controller"]?.ToString() == "Tech"
+                               && ViewContext.RouteData.Values["action"]?.ToString() == "Dashboard"
+                               ? "active"
+                               : "")" asp-area="" asp-controller="Tech" asp-action="Dashboard">
 
-                        <i class="bi bi-grid-1x2-fill"></i>
-                        <span>Dashboard</span>
+                                <i class="bi bi-grid-1x2-fill"></i>
+                                <span>Dashboard</span>
 
-                    </a>
+                            </a>
 
-                </li>
+                        </li>
 
 
-                <!-- ALUNOS -->
-                <li class="nav-item">
+                        <!-- ALUNOS -->
+                        <li class="nav-item">
 
-                    <a class="nav-link
-                       @(ViewContext.RouteData.Values["controller"]?.ToString() == "Alunos"
-                         ? "active"
-                         : "")"
-                       asp-area=""
-                       asp-controller="Alunos"
-                       asp-action="Index">
+                            <a class="nav-link
+                                @(ViewContext.RouteData.Values["controller"]?.ToString() == "Alunos"
+                               ? "active"
+                               : "")" asp-area="" asp-controller="Alunos" asp-action="Index">
 
-                        <i class="bi bi-mortarboard-fill"></i>
-                        <span>Alunos</span>
+                                <i class="bi bi-mortarboard-fill"></i>
+                                <span>Alunos</span>
 
-                    </a>
+                            </a>
 
-                </li>
+                        </li>
 
 
-                <!-- CATEGORIAS -->
-                <li class="nav-item">
+                        <!-- CATEGORIAS -->
+                        <li class="nav-item">
 
-                    <a class="nav-link
-                       @(ViewContext.RouteData.Values["controller"]?.ToString() == "Categorias"
-                         ? "active"
-                         : "")"
-                       asp-area=""
-                       asp-controller="Categorias"
-                       asp-action="Index">
+                            <a class="nav-link
+                                @(ViewContext.RouteData.Values["controller"]?.ToString() == "Categorias"
+                               ? "active"
+                               : "")" asp-area="" asp-controller="Categorias" asp-action="Index">
 
-                        <i class="bi bi-tags-fill"></i>
-                        <span>Categorias</span>
+                                <i class="bi bi-tags-fill"></i>
+                                <span>Categorias</span>
 
-                    </a>
+                            </a>
 
-                </li>
+                        </li>
 
 
-                <!-- PROFESSORES -->
-                <li class="nav-item">
+                        <!-- PROFESSORES -->
+                        <li class="nav-item">
 
-                    <a class="nav-link
-                       @(ViewContext.RouteData.Values["controller"]?.ToString() == "Professores"
-                         ? "active"
-                         : "")"
-                       asp-area=""
-                       asp-controller="Professores"
-                       asp-action="Index">
+                            <a class="nav-link
+                                @(ViewContext.RouteData.Values["controller"]?.ToString() == "Professores"
+                               ? "active"
+                               : "")" asp-area="" asp-controller="Professores" asp-action="Index">
 
-                        <i class="bi bi-person-workspace"></i>
-                        <span>Professores</span>
+                                <i class="bi bi-person-workspace"></i>
+                                <span>Professores</span>
 
-                    </a>
+                            </a>
 
-                </li>
+                        </li>
 
 
-                <!-- EQUIPES -->
-                <li class="nav-item">
+                        <!-- EQUIPES -->
+                        <li class="nav-item">
 
-                    <a class="nav-link
-                       @(ViewContext.RouteData.Values["controller"]?.ToString() == "Equipes"
-                         ? "active"
-                         : "")"
-                       asp-area=""
-                       asp-controller="Equipes"
-                       asp-action="Index">
+                            <a class="nav-link
+                                @(ViewContext.RouteData.Values["controller"]?.ToString() == "Equipes"
+                               ? "active"
+                               : "")" asp-area="" asp-controller="Equipes" asp-action="Index">
 
-                        <i class="bi bi-people-fill"></i>
-                        <span>Equipes</span>
+                                <i class="bi bi-people-fill"></i>
+                                <span>Equipes</span>
 
-                    </a>
+                            </a>
 
-                </li>
+                        </li>
 
 
-                <!-- PROJETOS -->
-                <li class="nav-item">
+                        <!-- PROJETOS -->
+                        <li class="nav-item">
 
-                    <a class="nav-link
-                       @(ViewContext.RouteData.Values["controller"]?.ToString() == "Projetos"
-                         ? "active"
-                         : "")"
-                       asp-area=""
-                       asp-controller="Projetos"
-                       asp-action="Index">
+                            <a class="nav-link
+                                @(ViewContext.RouteData.Values["controller"]?.ToString() == "Projetos"
+                               ? "active"
+                               : "")" asp-area="" asp-controller="Projetos" asp-action="Index">
 
-                        <i class="bi bi-kanban-fill"></i>
-                        <span>Projetos</span>
+                                <i class="bi bi-kanban-fill"></i>
+                                <span>Projetos</span>
 
-                    </a>
+                            </a>
 
-                </li>
+                        </li>
+                        @if (User.Identity?.IsAuthenticated == true)
+                        {
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="Admin" asp-action="Roles">Perfil de Usuário</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="Admin" asp-action="Usuarios">Usuários</a>
+                                </li>
+                            }
+                        }
 
-            </ul>
+                    </ul>
 
 
-            <!-- LOGIN -->
-            <partial name="_LoginPartial" />
+                    <!-- LOGIN -->
+                    <partial name="_LoginPartial" />
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main role="main" class="flex-grow-1">
+
+        <div class="container mt-2">
+
+            @if (TempData["Success"] != null)
+            {
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    @TempData["Success"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            }
+
+            @if (TempData["Error"] != null)
+            {
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    @TempData["Error"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            }
 
         </div>
-    </div>
-</nav>
-    </header>
-<main role="main" class="flex-grow-1">
 
-    <div class="container mt-2">
+        @RenderBody()
 
-        @if (TempData["Success"] != null)
-        {
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                @TempData["Success"]
-                <button type="button"
-                        class="btn-close"
-                        data-bs-dismiss="alert"></button>
-            </div>
-        }
+    </main>
 
-        @if (TempData["Error"] != null)
-        {
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                @TempData["Error"]
-                <button type="button"
-                        class="btn-close"
-                        data-bs-dismiss="alert"></button>
-            </div>
-        }
+    <footer class="tech-footer">
 
-    </div>
+        <div class="container-fluid">
 
-    @RenderBody()
-
-</main>
-
-<footer class="tech-footer">
-
-    <div class="container-fluid">
-
-        <div class="footer-content">
+            <div class="footer-content">
 
 
-            <!-- =========================================
+                <!-- =========================================
                  ESQUERDA - COPYRIGHT
             ========================================== -->
 
-            <div class="footer-column footer-copyright">
+                <div class="footer-column footer-copyright">
 
-                <div class="footer-brand">
-                    TechChallenge
+                    <div class="footer-brand">
+                        TechChallenge
+                    </div>
+
+                    <p>
+                        © @DateTime.Now.Year TechChallenge.
+                        Todos os direitos reservados.
+                    </p>
+
+                    <span>
+                        Plataforma para gestão de projetos estudantis.
+                    </span>
+
                 </div>
 
-                <p>
-                    © @DateTime.Now.Year TechChallenge.
-                    Todos os direitos reservados.
-                </p>
+
+                <!-- =========================================
+                 CENTRO - NAVEGAÇÃO
+            ========================================== -->
+
+                <div class="footer-column footer-navigation">
+
+                    <h4>
+                        Navegação
+                    </h4>
+
+                    <div class="footer-links">
+
+                        <a asp-controller="Home" asp-action="Index">
+
+                            <i class="bi bi-house-fill"></i>
+                            Home
+
+                        </a>
+
+
+                        <a asp-controller="Tech" asp-action="About">
+
+                            <i class="bi bi-info-circle"></i>
+                            Sobre
+
+                        </a>
+
+
+                        <a asp-controller="Tech" asp-action="Contact">
+
+                            <i class="bi bi-person-lines-fill"></i>
+                            Contato
+
+                        </a>
+
+
+                        <a asp-controller="Tech" asp-action="Dashboard">
+
+                            <i class="bi bi-grid-1x2-fill"></i>
+                            Dashboard
+
+                        </a>
+
+
+                        <a asp-controller="Projetos" asp-action="Index">
+
+                            <i class="bi bi-kanban-fill"></i>
+                            Projetos
+
+                        </a>
+
+
+                        <a asp-controller="Equipes" asp-action="Index">
+
+                            <i class="bi bi-people-fill"></i>
+                            Equipes
+
+                        </a>
+
+
+                        <a asp-controller="Alunos" asp-action="Index">
+
+                            <i class="bi bi-mortarboard-fill"></i>
+                            Alunos
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================================
+                 DIREITA - SUPORTE
+            ========================================== -->
+
+                <div class="footer-column footer-support">
+
+                    <h4>
+                        Suporte
+                    </h4>
+
+                    <p>
+                        Precisa de ajuda?
+                    </p>
+
+                    <div class="footer-socials">
+
+                        <!-- GitHub -->
+                        <a href="https://github.com/MichelAcre" target="_blank" rel="noopener noreferrer"
+                           aria-label="GitHub">
+
+                            <i class="bi bi-github"></i>
+
+                        </a>
+
+
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/MichelAcre" target="_blank" rel="noopener noreferrer"
+                           aria-label="Instagram">
+
+                            <i class="bi bi-instagram"></i>
+
+                        </a>
+
+
+                        <!-- YouTube -->
+                        <a href="https://www.youtube.com/@@biel_365" target="_blank" rel="noopener noreferrer"
+                           aria-label="YouTube">
+
+                            <i class="bi bi-youtube"></i>
+
+                        </a>
+
+
+                        <!-- X -->
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer"
+                           aria-label="X">
+
+                            <i class="bi bi-twitter-x"></i>
+
+                        </a>
+
+
+                        <!-- Discord -->
+                        <a href="https://discord.gg/nnvoucriarumservidorprosite" target="_blank"
+                           rel="noopener noreferrer" aria-label="Discord">
+
+                            <i class="bi bi-discord"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- LINHA INFERIOR -->
+
+            <div class="footer-bottom">
 
                 <span>
-                    Plataforma para gestão de projetos estudantis.
+                    TechChallenge
+                </span>
+
+                <span>
+                    Desenvolvido com tecnologia e criatividade.
                 </span>
 
             </div>
 
-
-            <!-- =========================================
-                 CENTRO - NAVEGAÇÃO
-            ========================================== -->
-
-            <div class="footer-column footer-navigation">
-
-                <h4>
-                    Navegação
-                </h4>
-
-                <div class="footer-links">
-
-                    <a asp-controller="Home"
-                       asp-action="Index">
-
-                        <i class="bi bi-house-fill"></i>
-                        Home
-
-                    </a>
-
-
-                    <a asp-controller="Tech"
-                       asp-action="About">
-
-                        <i class="bi bi-info-circle"></i>
-                        Sobre
-
-                    </a>
-
-
-                    <a asp-controller="Tech"
-                       asp-action="Contact">
-
-                        <i class="bi bi-person-lines-fill"></i>
-                        Contato
-
-                    </a>
-
-
-                    <a asp-controller="Tech"
-                       asp-action="Dashboard">
-
-                        <i class="bi bi-grid-1x2-fill"></i>
-                        Dashboard
-
-                    </a>
-
-
-                    <a asp-controller="Projetos"
-                       asp-action="Index">
-
-                        <i class="bi bi-kanban-fill"></i>
-                        Projetos
-
-                    </a>
-
-
-                    <a asp-controller="Equipes"
-                       asp-action="Index">
-
-                        <i class="bi bi-people-fill"></i>
-                        Equipes
-
-                    </a>
-
-
-                    <a asp-controller="Alunos"
-                       asp-action="Index">
-
-                        <i class="bi bi-mortarboard-fill"></i>
-                        Alunos
-
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- =========================================
-                 DIREITA - SUPORTE
-            ========================================== -->
-
-            <div class="footer-column footer-support">
-
-                <h4>
-                    Suporte
-                </h4>
-
-                <p>
-                    Precisa de ajuda?
-                </p>
-
-                <div class="footer-socials">
-
-                    <!-- GitHub -->
-                    <a href="https://github.com/SEU_USUARIO"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="GitHub">
-
-                        <i class="bi bi-github"></i>
-
-                    </a>
-
-
-                    <!-- Instagram -->
-                    <a href="https://www.instagram.com/SEU_USUARIO/"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="Instagram">
-
-                        <i class="bi bi-instagram"></i>
-
-                    </a>
-
-
-                    <!-- YouTube -->
-                    <a href="https://www.youtube.com/@@SEU_CANAL"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="YouTube">
-
-                        <i class="bi bi-youtube"></i>
-
-                    </a>
-
-
-                    <!-- X -->
-                    <a href="https://x.com/SEU_USUARIO"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="X">
-
-                        <i class="bi bi-twitter-x"></i>
-
-                    </a>
-
-
-                    <!-- Discord -->
-                    <a href="https://discord.gg/SEU_CONVITE"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       aria-label="Discord">
-
-                        <i class="bi bi-discord"></i>
-
-                    </a>
-
-                </div>
-
-            </div>
-
         </div>
 
-
-        <!-- LINHA INFERIOR -->
-
-        <div class="footer-bottom">
-
-            <span>
-                TechChallenge
-            </span>
-
-            <span>
-                Desenvolvido com tecnologia e criatividade.
-            </span>
-
-        </div>
-
-    </div>
-
-</footer>
+    </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="~/lib/bootstrap-icons/bootstrap-icons.min.css" />
