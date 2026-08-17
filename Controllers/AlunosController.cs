@@ -21,8 +21,14 @@ namespace TechChallenge.Controllers
         }
 
         // GET: Alunos
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string? searchString)
         {
+            var alunos = _context.Alunos.AsQueryable();
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                alunos = alunos.Where(a => a.Nome.Contains(searchString));
+            }
             return View(await _context.Alunos.ToListAsync());
         }
 

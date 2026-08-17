@@ -25,6 +25,12 @@
             Novo Aluno
         </a>
 
+        <form asp-action="Index" method="get">
+            <input type="text" name="searchString" value="@ViewBag.CurrentFilter" class="form-control" placeholder="Procure por nome ou email"/>
+            <button type="submit" class="btn btn-primary">Procurar</button>
+            <a asp-action="Index" class="btn btn-secondary">Limpar</a>
+        </form>
+
     </div>
 
 
