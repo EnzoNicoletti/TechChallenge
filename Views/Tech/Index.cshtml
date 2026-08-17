@@ -1,8 +1,48 @@
-@{
-    ViewData["Title"] = "TechChallenge";
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var teste = "Olá, bem vindo";
 }
 
-<div class="container mt-4">
-    <h1 class="display-4">@ViewData["Title"]</h1>
-    <p class="lead">@ViewData["Message"]</p>
-</div>
+<div class="container text-center mt-5">
+    <h1 class="display-4 fw-bold ourple">TechChallenge</h1>
+    <p class="lead textSecondary">Plataforma de Projetos e Inovação Estudantil</p>
+
+    <hr class="my-4" />
+
+    <p class="fs-5 textPrimary">Transforme ideias em projetos, participe de desafios e destaque seu talento.</p>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100 card-dark">
+                <i class="bi bi-people-fill display-5 mt-1 text-primary"></i>
+                <div class="card-body">
+                    <h5 class="card-title ourple">Crie Equipes e Projetos</h5>
+                    <p class="card-text textPrimary">Crie equipes, organize tarefas e desenvolva projetos com ferramentas que facilitam a colaboração entre todos os participantes.</p>
+                    </div>
+                    <a asp-controller="Equipes" asp-action="Index" class="btn btn-outline-primary w-50 mx-auto mb-3">Criar uma equipe </a>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 card-dark">
+                <i class="bi bi-flag-fill display-5 mt-1 text-success"></i>
+
+                    <div class="card-body">
+                        <h5 class="card-title ourple">Participe de Desafios</h5>
+                        <p class="card-text textPrimary">Coloque suas habilidades à prova em desafios e competições criados para estimular a criatividade, o trabalho em equipe e a inovação.</p>
+                        </div>
+                        <a asp-controller="Tech" asp-action="Dashboard" class="btn btn-outline-success w-50 mx-auto mb-3" >Participar 🏆</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 card-dark">
+                <i class="bi bi-trophy-fill display-5 mt-1 text-warning"></i>
+                        <div class="card-body">
+                            <h5 class="card-title ourple">Ganhe Pontos e Suba no Ranking</h5>
+                            <p class="card-text textPrimary">Conquiste pontos ao completar desafios, suba no ranking da plataforma e registre suas conquistas para destacar seu desempenho.</p>
+                            </div>
+                            <a  class="btn btn-outline-warning w-50 mx-auto mb-3" >Ver o Ranking Atual 🥇</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
