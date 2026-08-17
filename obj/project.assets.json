@@ -6133,23 +6133,23 @@
     ]
   },
   "packageFolders": {
-    "D:\\AI\\Cache\\NuGet\\Packages": {},
+    "C:\\Users\\DS2\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\2026 - 2 Sem\\I4DS\\TechChallenge\\TechChallenge.csproj",
+      "projectUniqueName": "C:\\Users\\DS2\\Documents\\Projetos\\TechChallenge\\TechChallenge.csproj",
       "projectName": "TechChallenge",
-      "projectPath": "D:\\2026 - 2 Sem\\I4DS\\TechChallenge\\TechChallenge.csproj",
-      "packagesPath": "D:\\AI\\Cache\\NuGet\\Packages",
-      "outputPath": "D:\\2026 - 2 Sem\\I4DS\\TechChallenge\\obj\\",
+      "projectPath": "C:\\Users\\DS2\\Documents\\Projetos\\TechChallenge\\TechChallenge.csproj",
+      "packagesPath": "C:\\Users\\DS2\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\DS2\\Documents\\Projetos\\TechChallenge\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\SP-Skills\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DS2\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

@@ -20,181 +20,181 @@ build_property.TargetFrameworkVersion = v10.0
 build_property.EntryPointFilePath = 
 build_property.RootNamespace = TechChallenge
 build_property.RootNamespace = TechChallenge
-build_property.ProjectDir = D:\2026 - 2 Sem\I4DS\TechChallenge\
+build_property.ProjectDir = C:\Users\DS2\Documents\Projetos\TechChallenge\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 10.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\2026 - 2 Sem\I4DS\TechChallenge
+build_property.MSBuildProjectDirectory = C:\Users\DS2\Documents\Projetos\TechChallenge
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/AlunosEquipes/Create.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/AlunosEquipes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bm9zRXF1aXBlc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/AlunosEquipes/Delete.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/AlunosEquipes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bm9zRXF1aXBlc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/AlunosEquipes/Details.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/AlunosEquipes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bm9zRXF1aXBlc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/AlunosEquipes/Edit.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/AlunosEquipes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bm9zRXF1aXBlc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/AlunosEquipes/Index.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/AlunosEquipes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bm9zRXF1aXBlc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Alunos/Create.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Alunos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bm9zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Alunos/Delete.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Alunos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bm9zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Alunos/Details.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Alunos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bm9zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Alunos/Edit.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Alunos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bm9zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Alunos/Index.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Alunos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWx1bm9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Categorias/Create.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Categorias/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Categorias/Delete.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Categorias/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Categorias/Details.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Categorias/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Categorias/Edit.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Categorias/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Categorias/Index.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Categorias/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Equipes/Create.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Equipes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBlc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Equipes/Delete.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Equipes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBlc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Equipes/Details.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Equipes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBlc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Equipes/Edit.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Equipes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBlc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Equipes/Index.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Equipes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBlc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Home/About.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Home/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Home/Index.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Home/Privacy.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Professores/Create.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Professores/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzc29yZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Professores/Delete.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Professores/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzc29yZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Professores/Details.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Professores/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzc29yZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Professores/Edit.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Professores/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzc29yZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Professores/Index.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Professores/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzc29yZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Projetos/Create.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Projetos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamV0b3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Projetos/Delete.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Projetos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamV0b3NcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Projetos/Details.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Projetos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamV0b3NcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Projetos/Edit.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Projetos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamV0b3NcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Projetos/Index.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Projetos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamV0b3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Shared/Error.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Tech/About.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Tech/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVjaFxBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Tech/Contact.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Tech/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVjaFxDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Tech/Dashboard.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Tech/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVjaFxEYXNoYm9hcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Tech/Index.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Tech/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVjaFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/_ViewImports.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/_ViewStart.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/2026 - 2 Sem/I4DS/TechChallenge/Views/Shared/_Layout.cshtml]
+[C:/Users/DS2/Documents/Projetos/TechChallenge/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-x51if88ydr
